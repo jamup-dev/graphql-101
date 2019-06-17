@@ -1,0 +1,42 @@
+enum Gender {
+	# Male
+	MALE
+	# Female
+	FEMALE
+	# Prefer not to say
+	PREFER_NOT_TO_SAY
+	# Non Binary
+	NON_BINARY
+}
+
+type Author {
+	id: ID!
+	fname: String!
+	lname: String!
+	gender: Gender!
+}
+
+type Book {
+	id: ID!
+	title: String!
+	author: Author!
+}
+
+type BookEdge {
+	cursor: ID!
+	node: Book!
+}
+
+type Books {
+	totalCount: Int!
+	edges: [BookEdge!]!
+}
+
+type Query {
+	book(id: ID!): Book
+	books: Books!
+}
+
+schema {
+	query: Query
+}
