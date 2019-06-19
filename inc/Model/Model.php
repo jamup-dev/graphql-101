@@ -2,7 +2,7 @@
 
 namespace LGraphQL\Model;
 
-abstract class Base implements IModel {
+class Model implements IModel {
 	protected $data = [];
 
 	protected $indexedKeys = [];
