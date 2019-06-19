@@ -1,0 +1,20 @@
+{
+    "name": "swashata/graph-ql-training",
+    "description": "Creating a super simple GraphQL server with graphql-php",
+    "type": "project",
+    "require": {
+        "webonyx/graphql-php": "^0.13.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Swashata Ghosh",
+            "email": "swashata@wpquark.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LGraphQL\\": "inc"
+        }
+    }
+}
